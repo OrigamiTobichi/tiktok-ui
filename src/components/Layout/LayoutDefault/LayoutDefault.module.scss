@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  min-height: 1000px;
+  width: 100%;
+  max-width: var(--default-layoyt-width);
+  display: flex;
+  justify-content: space-between;
+}
+.content {
+  background-color: #444;
+  width: 692px;
+}
