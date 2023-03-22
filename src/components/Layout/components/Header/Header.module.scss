@@ -1,0 +1,102 @@
+.wrapper {
+  --background-color-search: #f1f1f2;
+  --height-search: 46px;
+  --height-caret: 28px;
+  --search-btn-width: 52px;
+  width: 100%;
+  height: var(--default-layout-header-height);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px;
+  display: flex;
+  justify-content: center;
+}
+.inner {
+  width: var(--default-layoyt-width);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px 0 20px;
+}
+.search {
+  position: relative;
+  width: 361px;
+  height: var(--height-search);
+  background-color: var(--background-color-search);
+  border-radius: 92px;
+  border: 1px solid transparent;
+  padding-left: 16px;
+  display: flex;
+  input {
+    flex: 1;
+    font-size: 1.6rem;
+    font-weight: 200;
+    background-color: transparent;
+    caret-color: var(--primary);
+    height: 100%;
+    &:not(:placeholder-shown) ~ .search-button {
+      color: #4c4e57;
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    right: var(--search-btn-width);
+    top: 50%;
+    width: 1px;
+    background-color: rgba(22, 24, 35, 0.12);
+    height: calc(var(--height-search) - 18px);
+    transform: translateY(-50%);
+  }
+  &:focus-within {
+    border-color: #c5c6c9;
+  }
+}
+
+.search-result {
+  width: 361px;
+}
+.search-title {
+  padding: 5px 12px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #a2a3a7;
+}
+.clear,
+.loading {
+  position: absolute;
+  right: calc(var(--search-btn-width) + 16px);
+  top: 50%;
+  transform: translateY(-50%);
+  color: #a6a7ab;
+}
+
+.search-button {
+  width: var(--search-btn-width);
+  height: 100%;
+  border-top-right-radius: 92px;
+  border-bottom-right-radius: 92px;
+  color: #a6a7ab;
+  font-size: 1.9rem;
+  &:hover {
+    background: rgba(22, 24, 35, 0.03);
+    cursor: pointer;
+  }
+  &:active {
+    background: rgba(22, 24, 35, 0.06);
+  }
+}
+
+.action {
+  display: flex;
+  align-items: center;
+}
+
+.custom-login {
+  color: rgba(22, 24, 35, 0.75);
+}
+
+.more-icon {
+  font-size: 20px;
+  margin-left: 15px;
+  background-color: transparent;
+  padding: 6px;
+}
