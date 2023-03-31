@@ -1,6 +1,8 @@
 import classNames from 'classnames/bind';
 import styles from './Button.module.scss';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
 const cx = classNames.bind(styles);
 
 function Button({
@@ -65,5 +67,26 @@ function Button({
     </Cpn>
   );
 }
+
+//check các props của một component
+Button.propTypes = {
+  // onClick: PropTypes.func,
+  to: PropTypes.string,
+  href: PropTypes.string,
+  className: PropTypes.string,
+  onClick: PropTypes.func,
+  text: PropTypes.bool,
+  small: PropTypes.bool,
+  large: PropTypes.bool,
+  rounded: PropTypes.bool,
+  outline: PropTypes.bool,
+  primary: PropTypes.bool,
+  disable: PropTypes.bool,
+  toggle: PropTypes.node,
+  iconUpload: PropTypes.node,
+  iconRightSignIn: PropTypes.node,
+  iconLeftSignIn: PropTypes.node,
+  children: PropTypes.node.isRequired,
+};
 
 export default Button;

@@ -2,6 +2,10 @@
   padding: 9px 16px;
   display: flex;
   column-gap: 12px;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(22, 24, 35, 0.03);
+  }
 }
 .avatar {
   width: 40px;

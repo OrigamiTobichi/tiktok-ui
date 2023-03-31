@@ -4,11 +4,13 @@
   align-items: center;
 }
 .container {
+  margin-top: 60px;
   min-height: 1000px;
   width: 100%;
-  max-width: var(--default-layoyt-width);
+  max-width: var(--default-layout-width);
   display: flex;
   justify-content: space-between;
+  padding: 0 24px 0 20px;
 }
 .content {
   width: 692px;
