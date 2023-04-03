@@ -1,0 +1,20 @@
+.wrapper {
+  padding: 16px 0 0 8px;
+  color: rgba(22, 24, 35, 0.5);
+  border-top: 1px solid rgba(22, 24, 35, 0.12);
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+  ~ span,
+  li {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 17px;
+    display: inline-block;
+    margin-right: 6px;
+    margin-top: 5px;
+  }
+}

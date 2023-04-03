@@ -17,6 +17,7 @@
 .inner {
   width: var(--default-layout-width);
   display: flex;
+  max-width: 100%;
   align-items: center;
   justify-content: space-between;
   padding: 0 24px 0 20px;
@@ -100,6 +101,7 @@
 }
 
 .action {
+  margin-right: 5px;
   flex-basis: 30%;
   justify-content: flex-end;
   display: flex;
@@ -115,10 +117,10 @@
 }
 
 .more-icon {
+  display: flex;
   font-size: 20px;
-  margin-left: 15px;
+  margin-left: 20px;
   background-color: transparent;
-  padding: 6px;
   cursor: pointer;
 }
 

@@ -1,6 +1,6 @@
 .search {
   position: relative;
-  width: 361px;
+  width: 415px;
   height: var(--height-search);
   background-color: var(--background-color-search);
   border-radius: 92px;
@@ -8,13 +8,14 @@
   padding-left: 16px;
   display: flex;
   input {
+    height: 100%;
     flex: 1;
     font-family: var(--font-family);
     font-size: 1.6rem;
     font-weight: 200;
+    padding-right: 43px;
     background-color: transparent;
     caret-color: var(--primary);
-    height: 100%;
     &:not(:placeholder-shown) ~ .search-button {
       color: #4c4e57;
     }
@@ -36,10 +37,10 @@
 //search
 .search-wrapper {
   flex-basis: 40%;
-  margin-left: 83px;
+  margin-left: 43px;
 }
 .search-result {
-  width: 361px;
+  width: 415px;
 }
 .search-title {
   padding: 5px 12px;

@@ -1,0 +1,38 @@
+.wrapper {
+  width: 100%;
+  max-width: 348px;
+  min-height: 500px;
+  padding: 20px 0 26px 8px;
+  position: fixed;
+  overflow-y: scroll;
+  top: 61px;
+  bottom: 0;
+  z-index: 99;
+  background-color: var(--white);
+}
+.login-to-follow {
+  position: relative;
+  padding: 20px 8px 24px 8px;
+  &::before {
+    content: '';
+    position: absolute;
+    height: 0.5px;
+    left: 8px;
+    right: 8px;
+    background-color: rgba(22, 24, 35, 0.12);
+    top: 0;
+  }
+}
+.desc {
+  color: rgba(22, 24, 35, 0.5);
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.login-btn {
+  font-family: 'SofiaPro';
+  font-weight: 700;
+  width: 100%;
+  margin-left: 0;
+  margin-top: 20px;
+}
