@@ -10,7 +10,7 @@ function Home() {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
-    document.querySelector('#focus').focus();
+    // document.querySelector('#focus').focus();
     const videosCollectionRef = collection(db, 'videos');
     getDocs(videosCollectionRef)
       .then((res) => {
@@ -24,11 +24,14 @@ function Home() {
   }, []);
   return (
     //className="h-screen overflow-scroll overflow-x-hidden snap-y snap-mandatory" (snap)
-    <div id="focus" tabIndex="1">
+    /*focus để khi reload sẽ tự focus*/
+    //<div id="focus" tabIndex="1">
+    <>
       {videos.map((video, index) => (
         <VideoInfo key={index} data={video} />
       ))}
-    </div>
+    </>
+    //</div>
   );
 }
 

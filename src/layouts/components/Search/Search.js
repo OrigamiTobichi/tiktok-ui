@@ -73,7 +73,7 @@ function Search() {
         render={(attrs) => (
           <div className={cx('search-result')} tabIndex="-1" {...attrs}>
             <WrapperPopper>
-              <h4 className={cx('search-title')}>accounts</h4>
+              <h4 className={cx('search-title')}>Accounts</h4>
               {searchResult.map((user) => (
                 <AccountItem key={user.id} data={user} />
               ))}
@@ -83,7 +83,7 @@ function Search() {
       >
         <div className={cx('search')}>
           <input
-            placeholder="Search accounts or videos"
+            placeholder="Search accounts and videos"
             spellCheck={false}
             value={searchValue}
             onChange={(e) => {

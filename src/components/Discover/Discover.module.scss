@@ -36,6 +36,9 @@
     line-height: 18px;
     padding-left: 6px;
   }
+  &:hover {
+    background-color: rgba(22, 24, 35, 0.03);
+  }
 }
 .icon {
   width: 14px;

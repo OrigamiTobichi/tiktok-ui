@@ -1,7 +1,7 @@
 .wrapper {
   width: 100%;
   max-width: 348px;
-  min-height: 500px;
+  height: calc(100vh - 60px);
   padding: 20px 0 26px 8px;
   position: fixed;
   overflow-y: scroll;

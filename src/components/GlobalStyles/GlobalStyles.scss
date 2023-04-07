@@ -5,9 +5,11 @@
   --black: #000;
   --white: #fff;
   --default-layout-header-height: 60px;
-  --default-layout-width: 1150px;
+  // --default-layout-width: 1150px;
+  --default-layout-width: 100vw;
   --font-family: 'ProximaNova', sans-serif;
 }
+
 * {
   user-select: none;
   padding: 0;
@@ -86,6 +88,10 @@ a[href] {
 li {
   list-style: none;
 }
+svg {
+  display: inline-block;
+}
+
 img {
   max-width: 100%;
 }

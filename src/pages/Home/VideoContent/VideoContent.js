@@ -41,7 +41,7 @@ function VideoContent({ data }) {
         setPlaying(false);
       }
     }
-  }, [isVisible, playing]);
+  }, [isVisible]);
 
   return (
     <div className={cx('wrapper')}>

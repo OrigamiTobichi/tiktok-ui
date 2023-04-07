@@ -17,4 +17,9 @@
     margin-right: 6px;
     margin-top: 5px;
   }
+  & li:hover {
+    cursor: pointer;
+    color: rgba(22, 24, 35, 0.5);
+    text-decoration: underline;
+  }
 }

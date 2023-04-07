@@ -1,5 +1,8 @@
+import { UserAuth } from '~/context/AuthContext';
+
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
+import 'tippy.js/animations/scale.css';
 import styles from './Header.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -22,6 +25,7 @@ import Image from '~/components/Images';
 import Search from '../Search';
 import { Link } from 'react-router-dom';
 import config from '~/config';
+import { useState, useEffect } from 'react';
 const cx = classNames.bind(styles);
 //config menu items
 const MENU_ITEMS = [
@@ -145,7 +149,25 @@ function Header() {
       default:
     }
   };
-  const currentUser = true;
+
+  //set state
+  const { googleSignIn, user } = UserAuth();
+
+  const [currentUser, setCurrentUser] = useState(false);
+
+  useEffect(() => {
+    if (!user) setCurrentUser(false);
+    else setCurrentUser(true);
+  }, [user]);
+
+  //handle click signin
+  const handleGoogleSignIn = async () => {
+    try {
+      await googleSignIn();
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <header className={cx('wrapper')}>
@@ -158,17 +180,17 @@ function Header() {
         <Search />
 
         <div className={cx('action', currentUser && 'gap')}>
-          <Button text iconUpload={<Icons.UploadIcon />}>
+          <Button to="/upload" text iconUpload={<Icons.UploadIcon />}>
             Upload
           </Button>
           {currentUser ? (
             <>
-              <Tippy content="Messages" delay={[0, 100]}>
+              <Tippy content="Messages" delay={[0, 100]} animation="scale">
                 <button className={cx('user-btn')}>
                   <Icons.PaperPlane />
                 </button>
               </Tippy>
-              <Tippy content="Inbox" delay={[0, 100]}>
+              <Tippy content="Inbox" delay={[0, 100]} animation="scale">
                 <button className={cx('user-btn')}>
                   <Icons.Messages />
                   <span className={cx('badge')}>1</span>
@@ -177,7 +199,7 @@ function Header() {
             </>
           ) : (
             <>
-              <Button to="/" primary iconLeftSignIn={<FontAwesomeIcon icon={faSignIn} />}>
+              <Button onClick={handleGoogleSignIn} primary iconLeftSignIn={<FontAwesomeIcon icon={faSignIn} />}>
                 Log in
               </Button>
               {/*Tippy more items*/}
@@ -185,11 +207,7 @@ function Header() {
           )}
           {currentUser ? (
             <Menu items={MENU_USERS} onChange={handleChange}>
-              <Image
-                className={cx('user-avatar')}
-                src="https://lh3.googleusercontent.com/ogw/AAEL6sh00fQIEZje_a7oKEZ9DalQO2eUjUYk-AF-vn3Q4g=s32-c-mo"
-                alt="user"
-              />
+              <Image className={cx('user-avatar')} src={user?.photoURL} alt={user?.displayName} />
             </Menu>
           ) : (
             <Menu items={MENU_ITEMS} onChange={handleChange}>

@@ -1,4 +1,6 @@
 import Tippy from '@tippyjs/react/headless';
+import 'tippy.js/animations/shift-away.css';
+
 import classNames from 'classnames/bind';
 import styles from './Menu.module.scss';
 import PropTypes from 'prop-types';
@@ -11,9 +13,10 @@ import { useState } from 'react';
 const cx = classNames.bind(styles);
 
 function Menu({ children, items = [], hideOnClick = false, onChange = () => {} }) {
+  //states
+  // const [isVisible, setIsVisible] = useState();
   const [history, setHistory] = useState([{ data: items }]);
 
-  console.log(history);
   const current = history[history.length - 1];
 
   //xử lí khi quay lại trang
@@ -21,21 +24,17 @@ function Menu({ children, items = [], hideOnClick = false, onChange = () => {} }
     setHistory((prev) => prev.slice(0, history.length - 1));
   };
 
-  //xử lí khi menu ẩn và đi về trang đầu
-  const handleResetMenu = () => {
-    setHistory((prev) => prev.slice(0, 1));
-  };
-
-  const renderMenuItems = () => {
+  const renderItems = () => {
     return current.data.map((item, index) => {
       const isParent = !!item.children;
+
       return (
         <MenuItems
-          data={item}
           key={index}
+          data={item}
           onClick={() => {
             if (isParent) {
-              setHistory((prevState) => [...prevState, item.children]);
+              setHistory((prev) => [...prev, item.children]);
             } else {
               onChange(item);
             }
@@ -45,24 +44,29 @@ function Menu({ children, items = [], hideOnClick = false, onChange = () => {} }
     });
   };
 
-  const renderSearchResult = (attrs) => (
+  const renderResult = (attrs) => (
     <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
       <WrapperPopper className={cx('menu-popper')}>
         {history.length > 1 && <Header title={current.title} onBack={handleBackMenu} />}
-        <div className={cx('menu-wrapper')}>{renderMenuItems()}</div>
+        <div className={cx('menu-body')}>{renderItems()}</div>
       </WrapperPopper>
     </div>
   );
 
+  // Reset to first page
+  const handleReset = () => {
+    setHistory((prev) => prev.slice(0, 1));
+  };
+
   return (
     <Tippy
-      hideOnClick={hideOnClick}
-      delay={[null, 600]}
-      offset={[12, 10]}
       interactive
+      delay={[0, 700]}
+      offset={[12, 8]}
+      hideOnClick={hideOnClick}
       placement="bottom-end"
-      render={renderSearchResult}
-      onHide={handleResetMenu}
+      render={renderResult}
+      onHide={handleReset}
     >
       {children}
     </Tippy>
