@@ -19,13 +19,11 @@ function UploadVideo({ data }) {
   const isVisible = useElementOnScreen(options, videoRef);
   useEffect(() => {
     if (isVisible) {
-      console.log(isVisible);
       if (!playing) {
         videoRef.current.play();
         setPlaying(true);
       }
     } else {
-      console.log(isVisible);
       if (playing) {
         videoRef.current.pause();
         setPlaying(false);
@@ -36,7 +34,7 @@ function UploadVideo({ data }) {
   return (
     <>
       <div className={cx('wrapper')}>
-        <video ref={videoRef} src={data} className={cx('video')} controls autoPlay muted loop></video>
+        <video ref={videoRef} src={data} className={cx('video')} controls loop></video>
 
         <div className={cx('interactive')}>
           <button className={cx('btn-like')}>

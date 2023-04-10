@@ -34,7 +34,7 @@ function VideoContent({ data }) {
 
   return (
     <div className={cx('wrapper')}>
-      <video ref={videoRef} src={data.data.video} className={cx('video')} controls autoPlay muted loop></video>
+      <video ref={videoRef} src={data.data.video} className={cx('video')} controls loop></video>
 
       <div className={cx('interactive')}>
         <button className={cx('btn-like')}>
