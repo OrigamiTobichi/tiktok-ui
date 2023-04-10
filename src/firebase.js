@@ -2,7 +2,7 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
 import { getStorage } from 'firebase/storage';
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
   authDomain: 'tiktok-ui-48cfe.firebaseapp.com',
   databaseURL: 'https://tiktok-ui-48cfe-default-rtdb.firebaseio.com',

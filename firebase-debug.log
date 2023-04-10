@@ -1,0 +1,44 @@
+[debug] [2023-04-10T16:19:45.461Z] ----------------------------------------------------------------------
+[debug] [2023-04-10T16:19:45.462Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\LEGION\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-04-10T16:19:45.463Z] CLI Version:   11.25.3
+[debug] [2023-04-10T16:19:45.463Z] Platform:      win32
+[debug] [2023-04-10T16:19:45.463Z] Node Version:  v18.12.1
+[debug] [2023-04-10T16:19:45.464Z] Time:          Mon Apr 10 2023 23:19:45 GMT+0700 (Indochina Time)
+[debug] [2023-04-10T16:19:45.464Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-04-10T16:19:45.537Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-10T16:19:45.538Z] > authorizing via signed-in user (nguyenduc09012003@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\tiktok-ui\my-tiktok
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-04-10T16:19:51.833Z] Using project from CLI flag: tiktok-ui-48cfe
+[debug] [2023-04-10T16:19:51.836Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tiktok-ui-48cfe [none]
+[debug] [2023-04-10T16:19:52.642Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tiktok-ui-48cfe 200
+[debug] [2023-04-10T16:19:52.643Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tiktok-ui-48cfe {"projectId":"tiktok-ui-48cfe","projectNumber":"57525405602","displayName":"tiktok-ui","name":"projects/tiktok-ui-48cfe","resources":{"hostingSite":"tiktok-ui-48cfe","realtimeDatabaseInstance":"tiktok-ui-48cfe-default-rtdb","storageBucket":"tiktok-ui-48cfe.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_507763fc-6ad5-4c31-804a-7df0be84b0fa"}
+[info] i  Using project tiktok-ui-48cfe (tiktok-ui) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
