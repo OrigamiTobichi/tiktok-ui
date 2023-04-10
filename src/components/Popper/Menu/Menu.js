@@ -8,20 +8,29 @@ import PropTypes from 'prop-types';
 import { Wrapper as WrapperPopper } from '~/components/Popper';
 import MenuItems from './MenuItems';
 import Header from './Header';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { UserAuth } from '~/context/AuthContext';
 
 const cx = classNames.bind(styles);
 
-function Menu({ children, items = [], hideOnClick = false, onChange = () => {} }) {
+function Menu({ children, items, hideOnClick = false, onChange = () => {} }) {
   //states
-  // const [isVisible, setIsVisible] = useState();
   const [history, setHistory] = useState([{ data: items }]);
+  useEffect(() => {
+    setHistory([{ data: items }]);
+  }, [items]);
 
   const current = history[history.length - 1];
 
   //xử lí khi quay lại trang
   const handleBackMenu = () => {
     setHistory((prev) => prev.slice(0, history.length - 1));
+  };
+  //handle Logout User
+  const { logOut } = UserAuth();
+
+  const handleLogout = () => {
+    logOut();
   };
 
   const renderItems = () => {
@@ -35,6 +44,8 @@ function Menu({ children, items = [], hideOnClick = false, onChange = () => {} }
           onClick={() => {
             if (isParent) {
               setHistory((prev) => [...prev, item.children]);
+            } else if (item.title === 'Log out') {
+              handleLogout();
             } else {
               onChange(item);
             }

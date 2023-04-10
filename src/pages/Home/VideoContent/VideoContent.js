@@ -1,6 +1,5 @@
 import classNames from 'classnames/bind';
 import styles from './VideoContent.module.scss';
-import Videos from '~/assets/videos';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComment, faHeart, faShare } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useRef, useState } from 'react';
@@ -12,16 +11,6 @@ function VideoContent({ data }) {
   const [playing, setPlaying] = useState(false);
 
   const videoRef = useRef();
-
-  const handlePlayVideo = () => {
-    if (playing) {
-      setPlaying(false);
-      videoRef.current.pause();
-    } else {
-      setPlaying(true);
-      videoRef.current.play();
-    }
-  };
 
   const options = {
     root: null,
@@ -45,17 +34,7 @@ function VideoContent({ data }) {
 
   return (
     <div className={cx('wrapper')}>
-      <video
-        id="video"
-        ref={videoRef}
-        src={data.data.video}
-        className={cx('video')}
-        onClick={handlePlayVideo}
-        controls
-        autoPlay
-        muted
-        loop
-      ></video>
+      <video ref={videoRef} src={data.data.video} className={cx('video')} controls autoPlay muted loop></video>
 
       <div className={cx('interactive')}>
         <button className={cx('btn-like')}>

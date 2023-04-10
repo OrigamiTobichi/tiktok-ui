@@ -1,6 +1,7 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
+import { getStorage } from 'firebase/storage';
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
   authDomain: 'tiktok-ui-48cfe.firebaseapp.com',
@@ -15,4 +16,5 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
-export { db, auth };
+const storage = getStorage(app);
+export { db, auth, storage };

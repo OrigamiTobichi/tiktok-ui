@@ -1,5 +1,5 @@
 import { UserAuth } from '~/context/AuthContext';
-
+import { useNavigate } from 'react-router-dom';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import 'tippy.js/animations/scale.css';
@@ -161,6 +161,8 @@ function Header() {
   }, [user]);
 
   //handle click signin
+  const navigate = useNavigate();
+
   const handleGoogleSignIn = async () => {
     try {
       await googleSignIn();
@@ -168,6 +170,22 @@ function Header() {
       console.log(err);
     }
   };
+
+  const handleClickUpLoad = async () => {
+    try {
+      await googleSignIn();
+      navigate('/');
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const props = {};
+  if (user) {
+    props.to = '/upload';
+  } else {
+    props.onClick = handleClickUpLoad;
+  }
 
   return (
     <header className={cx('wrapper')}>
@@ -180,7 +198,7 @@ function Header() {
         <Search />
 
         <div className={cx('action', currentUser && 'gap')}>
-          <Button to="/upload" text iconUpload={<Icons.UploadIcon />}>
+          <Button {...props} text iconUpload={<Icons.UploadIcon />}>
             Upload
           </Button>
           {currentUser ? (

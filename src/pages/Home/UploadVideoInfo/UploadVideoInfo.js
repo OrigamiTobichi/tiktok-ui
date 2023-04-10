@@ -1,28 +1,31 @@
 import classNames from 'classnames/bind';
-import styles from './VideoInfo.module.scss';
+import styles from './UploadVideoInfo.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMusic } from '@fortawesome/free-solid-svg-icons';
 import Button from '~/components/Button/Button';
-import VideoContent from '../VideoContent';
 
 const cx = classNames.bind(styles);
 
-function VideoInfo({ data }) {
+function UploadVideoInfo() {
   return (
     <div className={cx('content')}>
       <div className={cx('wrapper')}>
         <div>
-          <img className={cx('avatar')} src={data.data.avatar} alt="Rinka Mizuki" />
+          <img
+            className={cx('avatar')}
+            src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/625a05296ec06c4ad0c4d8bf7ccdc7f7~c5_100x100.jpeg?x-expires=1681293600&x-signature=XhLCVHuup04YmGxoLJimAuWr5FE%3D"
+            alt="Rinka Mizuki"
+          />
         </div>
         <div className={cx('desc')}>
           <div className={cx('info-user')}>
-            <h3 className={cx('nickname')}>{data.data.nickname}</h3>
-            <span className={cx('name')}>{data.data.name}</span>
+            <h3 className={cx('nickname')}>stella</h3>
+            <span className={cx('name')}>Stella Vermillion</span>
           </div>
           <div className={cx('hashtag')}>
-            <p>{data.data.content}</p>
+            <p>I am a Wibi</p>
             <strong>
-              <a href="#">{data.data.tag}</a>
+              <a href="#">#anime</a>
             </strong>
             <strong>
               <a href="#">#j4f</a>
@@ -39,9 +42,8 @@ function VideoInfo({ data }) {
           </Button>
         </div>
       </div>
-      <VideoContent data={data} />
     </div>
   );
 }
 
-export default VideoInfo;
+export default UploadVideoInfo;

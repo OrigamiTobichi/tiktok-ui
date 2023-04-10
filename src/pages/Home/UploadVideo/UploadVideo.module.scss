@@ -1,0 +1,57 @@
+.wrapper {
+  display: flex;
+}
+.interactive {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.video {
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+  background-size: cover;
+  margin-left: 68px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-right: 20px;
+  max-width: 271.9px;
+  height: calc(450px + ((100vw - 768px) / 1152) * 100);
+  &:fullscreen {
+    object-fit: contain;
+  }
+}
+
+.btn-like {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.icon-heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  font-size: 23px;
+  border-radius: 50%;
+  transition: all 200ms ease-in-out 0s;
+  background-color: rgba(22, 24, 35, 0.06);
+  margin-top: 8px;
+  margin-bottom: 6px;
+}
+.view {
+  color: rgba(22, 24, 35, 0.75);
+  font-size: 12px;
+  line-height: 17px;
+  text-align: center;
+}
