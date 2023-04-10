@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind';
 import styles from './Discover.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExclamation, faExclamationTriangle, faHashtag, faMusic } from '@fortawesome/free-solid-svg-icons';
+import { faHashtag, faMusic } from '@fortawesome/free-solid-svg-icons';
 
 const cx = classNames.bind(styles);
 

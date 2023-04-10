@@ -11,7 +11,7 @@ function Upload() {
   //state
   const [videoUrl, setVideoUrl] = useState(null);
 
-  const { setVideoList, videoList } = UserAuth();
+  const { setVideoList } = UserAuth();
   //upload video
   const storage = getStorage();
   useEffect(() => {
@@ -24,6 +24,7 @@ function Upload() {
         });
       });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [videoUrl]);
 
   return (
