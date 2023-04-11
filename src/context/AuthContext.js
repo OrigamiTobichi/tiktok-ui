@@ -1,7 +1,7 @@
 import { useContext, createContext, useEffect, useState } from 'react';
 //authentication
 import { GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signInWithRedirect, signOut } from 'firebase/auth';
-import { auth } from '~/firebase';
+import auth from '~/firebase';
 //storage
 import { getStorage, ref, listAll, getDownloadURL } from 'firebase/storage';
 
