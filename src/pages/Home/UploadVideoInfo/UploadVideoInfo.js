@@ -3,7 +3,7 @@ import styles from './UploadVideoInfo.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMusic } from '@fortawesome/free-solid-svg-icons';
 import Button from '~/components/Button/Button';
-
+import Image from '~/components/Images';
 const cx = classNames.bind(styles);
 
 function UploadVideoInfo() {
@@ -11,7 +11,7 @@ function UploadVideoInfo() {
     <div className={cx('content')}>
       <div className={cx('wrapper')}>
         <div>
-          <img
+          <Image
             className={cx('avatar')}
             src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/625a05296ec06c4ad0c4d8bf7ccdc7f7~c5_100x100.jpeg?x-expires=1681293600&x-signature=XhLCVHuup04YmGxoLJimAuWr5FE%3D"
             alt="Rinka Mizuki"

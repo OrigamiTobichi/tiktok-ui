@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMusic } from '@fortawesome/free-solid-svg-icons';
 import Button from '~/components/Button/Button';
 import VideoContent from '../VideoContent';
+import Image from '~/components/Images';
 
 const cx = classNames.bind(styles);
 
@@ -12,7 +13,7 @@ function VideoInfo({ data }) {
     <div className={cx('content')}>
       <div className={cx('wrapper')}>
         <div>
-          <img className={cx('avatar')} src={data.data.avatar} alt="Rinka Mizuki" />
+          <Image className={cx('avatar')} src={data.data.avatar} alt="Rinka Mizuki" />
         </div>
         <div className={cx('desc')}>
           <div className={cx('info-user')}>
