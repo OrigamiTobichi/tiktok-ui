@@ -4,7 +4,7 @@
   border-top: 1px solid rgba(22, 24, 35, 0.12);
 }
 .label {
-  color: rgba(22, 24, 35, 0.75);
+  color: var(--light-grey-075);
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
@@ -25,22 +25,24 @@
   padding: 3px 10px;
   border: 1px solid rgba(22, 24, 35, 0.2);
   border-radius: 12px;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--white-discover);
+  transition: background-color 250ms ease 0s;
   > p {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    color: rgba(22, 24, 35, 0.75);
+    color: var(--light-grey-075);
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
     padding-left: 6px;
   }
   &:hover {
-    background-color: rgba(22, 24, 35, 0.03);
+    background-color: var(--light-grey-003);
   }
 }
 .icon {
+  color: var(--light-grey-075);
   width: 14px;
   height: 14px;
 }

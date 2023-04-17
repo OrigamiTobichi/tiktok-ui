@@ -1,6 +1,6 @@
 .wrapper {
   padding: 16px 0 0 8px;
-  color: rgba(22, 24, 35, 0.5);
+  color: var(--light-grey-05);
   border-top: 1px solid rgba(22, 24, 35, 0.12);
 }
 
@@ -19,7 +19,7 @@
   }
   & li:hover {
     cursor: pointer;
-    color: rgba(22, 24, 35, 0.5);
+    color: var(--light-grey-05);
     text-decoration: underline;
   }
 }

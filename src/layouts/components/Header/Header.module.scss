@@ -7,10 +7,12 @@
   top: 0;
   left: 0;
   z-index: 10;
-  background-color: var(--white);
+  background-color: var(--white-header);
   width: 100%;
   height: var(--default-layout-header-height);
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px;
+  box-shadow: 0px 1px 1px var(--light-shadow-header);
+  z-index: 999999999;
   display: flex;
   justify-content: center;
 }
@@ -153,4 +155,7 @@
   width: 3.2rem;
   height: 3.2rem;
   border-radius: 50%;
+}
+.btn-dark {
+  color: var(--light-btn-chat-notice);
 }

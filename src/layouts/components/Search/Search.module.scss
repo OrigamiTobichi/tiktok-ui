@@ -2,7 +2,7 @@
   position: relative;
   width: 415px;
   height: var(--height-search);
-  background-color: var(--background-color-search);
+  background-color: var(--light-bg-search);
   border-radius: 92px;
   border: 1px solid transparent;
   padding-left: 16px;
@@ -21,7 +21,7 @@
     }
   }
   ::placeholder {
-    color: rgba(22, 24, 35, 0.664) !important;
+    color: var(--light-placeholder);
   }
   &::after {
     content: '';
@@ -29,7 +29,7 @@
     right: var(--search-btn-width);
     top: 50%;
     width: 1px;
-    background-color: rgba(22, 24, 35, 0.12);
+    background-color: var(--light-line-search);
     height: calc(var(--height-search) - 18px);
     transform: translateY(-50%);
   }
@@ -82,7 +82,7 @@
   height: 100%;
   border-top-right-radius: 92px;
   border-bottom-right-radius: 92px;
-  color: #a6a7ab;
+  color: var(--light-btn-search);
   font-size: 1.9rem;
   &:hover {
     background: rgba(22, 24, 35, 0.03);

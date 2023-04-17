@@ -7,9 +7,9 @@ import AccountPreview from './AccountPreview';
 import Image from '~/components/Images';
 const cx = classNames.bind(styles);
 
-function AccountItem({ data }) {
+function AccountItem({ data, label }) {
   return (
-    <AccountPreview data={data}>
+    <AccountPreview data={data} label={label}>
       <div className={cx('account-item')}>
         <Image className={cx('account-avatar')} src={data.data.avatar} alt="user" fallBack={image.ayakaImage} />
         <div className={cx('account-info')}>

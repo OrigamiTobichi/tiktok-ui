@@ -35,7 +35,7 @@ function SuggestAccounts({ label, see }) {
     <div className={cx('wrapper')}>
       <h2 className={cx('label')}>{label}</h2>
       {suggestAccounts.slice(0, loadCount).map((account) => (
-        <AccountItem data={account} key={account.id} />
+        <AccountItem data={account} key={account.id} label={label} />
       ))}
       <button className={cx('more-btn')} onClick={handleClickShow}>
         <p className={cx('see-all')}>{showLoadAll ? 'See less' : see}</p>

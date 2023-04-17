@@ -2,7 +2,8 @@
   width: 100%;
   min-height: 100px;
   max-height: min(100vh - 96px - 60px, 734px);
-  background: rgb(255, 255, 255);
+  background-color: var(--white-discover);
+  color: var(--light-btn-chat-notice);
   display: flex;
   flex-direction: column;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 12px;

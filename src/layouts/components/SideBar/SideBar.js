@@ -7,10 +7,13 @@ import Button from '~/components/Button/Button';
 import SuggestAccounts from '~/components/SuggestAccounts';
 import Discover from '~/components/Discover/Discover';
 import AboutInfo from '~/components/AboutInfo/AboutInfo';
+import { UserAuth } from '~/context/AuthContext';
 
 const cx = classNames.bind(styles);
 
 function SideBar() {
+  const { user } = UserAuth();
+
   return (
     <aside className={cx('wrapper')}>
       <Menu>
@@ -34,14 +37,19 @@ function SideBar() {
         />
       </Menu>
 
-      <div className={cx('login-to-follow')}>
-        <p className={cx('desc')}>Log in to follow creators, like videos, and view comments. </p>
-        <Button outline large className={cx('login-btn')}>
-          Log in
-        </Button>
-      </div>
+      {!user ? (
+        <div className={cx('login-to-follow')}>
+          <p className={cx('desc')}>Log in to follow creators, like videos, and view comments. </p>
+          <Button outline large className={cx('login-btn')}>
+            Log in
+          </Button>
+        </div>
+      ) : (
+        <></>
+      )}
 
       <SuggestAccounts label="Suggested accounts" see="See all" />
+      {user && <SuggestAccounts label="Following accounts" see="See more" />}
       <Discover />
       <AboutInfo />
     </aside>

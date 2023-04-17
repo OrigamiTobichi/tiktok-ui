@@ -1,13 +1,77 @@
 @import 'normalize.css';
 
 :root {
+  //color/lightmode
   --primary: #fe2c55;
   --black: #000;
   --white: #fff;
+  --light-info-user:var(--light-grey);
+  --light-shadow-header: rgba(0, 0, 0, 0.12);
+  --white-header: #fff;
+  --white-sidebar: #fff;
+  --white-content: #fff;
+  --white-discover: #fff;
+  --white-btn-app: #fff;
+  --white-btn-hover:#fff;
+  --white-btn-follow-hover:rgba(254, 44, 85, 0.06);
+  --white-btn-follow:#fff;
+  --light-btn-chat-notice: #000;
+  --light-btn-search: #a6a7ab;
+  --light-grey-075: rgba(22, 24, 35, 0.75);
+  --light-grey: rgba(22, 24, 35);
+  --light-grey-064: rgba(22, 24, 35, 0.64);
+  --light-grey-05: rgba(22, 24, 35, 0.5);
+  --light-grey-003: rgba(22, 24, 35, 0.03);
+  --light-bg-search: rgba(22, 24, 35, 0.06);
+  --light-placeholder: rgba(22, 24, 35, 0.664);
+  --light-line-search: rgba(22, 24, 35, 0.12);
+  //color/darkmode
+  --dark-grey-09: rgba(255, 255, 255, 0.9);
+  --dark-grey-075: rgba(255, 255, 255, 0.75);
+  --dark-grey-05: rgba(255, 255, 255, 0.5);
+  --dark-black-18: rgb(18, 18, 18, 1);
+  --dark-black-37: rgb(37, 37, 37);
+  --dark-black-46: rgba(46, 46, 46, 1);
+  --dark-black-008: rgba(255, 255, 255, 0.08);
+  --dark-black-27: rgb(27 27 27);
+  --dark-black-012: rgba(255, 255, 255, 0.12);
+  --dark-black-004: rgba(255, 255, 255, 0.04);
+  --dark-placeholder: rgb(114 114 114);
+  --dark-btn-follow-hover: rgb(32 20 22);
+  --dark-shadow-header:rgb(255 255 255 / 12%);
+  
+  //size
   --default-layout-header-height: 60px;
   // --default-layout-width: 1150px;
   --default-layout-width: 100vw;
+  //font
   --font-family: 'ProximaNova', sans-serif;
+}
+
+[data-theme='dark'] {
+  --light-shadow-header: var(--dark-shadow-header);
+  --light-info-user:var(--dark-grey-09);
+  --white-btn-follow-hover:#000000c9;
+  --white-btn-follow:var(--dark-btn-follow-hover);
+  --white-btn-hover:var(--dark-black-46);
+  --white-btn-app: var(--dark-black-37);
+  --light-btn-chat-notice: var(--dark-grey-09);
+  --light-placeholder: var(--dark-placeholder);
+  --light-btn-search: var(--dark-placeholder);
+  --light-line-search: var(--dark-black-012);
+  --light-bg-search: var(--dark-black-012);
+  --white-sidebar: var(--dark-black-18);
+  --white-header: var(--dark-black-18);
+  --white-content: var(--dark-black-18);
+  --white-discover: var(--dark-black-008);
+  --light-grey-05: var(--dark-grey-05);
+  --light-grey-003: var(--dark-black-004);
+  --light-grey-075: var(--dark-grey-075);
+  --light-grey-064: var(--dark-grey-075);
+  --light-grey: var(--dark-grey-09);
+  a[href] {
+    color: var(--white);
+  }
 }
 
 * {
@@ -103,6 +167,8 @@ button,
 }
 
 //custom tooltip
+
+
 body .tippy-box {
   border-radius: 8px;
   font-weight: 400;

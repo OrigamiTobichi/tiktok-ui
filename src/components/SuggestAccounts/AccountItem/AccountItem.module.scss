@@ -5,7 +5,7 @@
   border-radius: 4px;
   transition: background-color 200ms ease-in-out 0s;
   &:hover {
-    background-color: rgba(22, 24, 35, 0.03);
+    background-color: var(--light-grey-003);
   }
 }
 .account-avatar {
@@ -23,7 +23,7 @@
 }
 
 .nickname {
-  color: rgb(22, 24, 35);
+  color: var(--light-grey);
   font-weight: 700;
   font-size: 16px;
   line-height: 22px;
@@ -42,7 +42,7 @@
 }
 
 .name {
-  color: rgba(22, 24, 35, 0.75);
+  color: var(--light-grey-075);
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;

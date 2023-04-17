@@ -1,17 +1,19 @@
 //menu wrapper
 .menu-list {
   width: 223px;
+  // background-color: var(--light-bg-search);
   .menu-item {
     border: none;
     width: 100%;
     justify-content: flex-start;
     margin-left: 0;
+    border-radius: unset;
     padding: 10px 8px 10px 16px;
     &:hover {
-      background-color: rgba(22, 24, 35, 0.03);
+      background-color: var(--light-grey-003);
     }
     &.separate {
-      border-top: 1px solid rgba(22, 24, 35, 0.12);
+      border-top: 1px solid var(--light-line-search);
     }
   }
 }

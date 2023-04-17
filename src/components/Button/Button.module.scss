@@ -6,7 +6,6 @@
   line-height: 22px;
   border-radius: 4px;
   cursor: pointer;
-  background-color: var(--white);
   border: 1px solid transparent;
   display: inline-flex;
   align-items: center;
@@ -48,6 +47,7 @@
 //button types
 
 .text {
+  background-color: var(--white-discover);
   border-color: rgba(22, 24, 35, 0.12);
   min-width: 110px;
   padding: 5px 14px;
@@ -56,9 +56,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 0;
+  border-radius: 0.2rem;
+  transition: background-color 250ms ease 0s;
   &:hover {
-    background-color: rgba(22, 24, 35, 0.03);
+    background-color: var(--light-grey-003);
   }
 }
 
@@ -68,6 +69,8 @@
   box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;
   border-radius: 52px;
   text-align: center;
+  color: var(--light-grey-075);
+  background-color: var(--white-btn-app);
   white-space: nowrap;
   transition: transform 0.3s cubic-bezier(0.4, 0.14, 0.3, 1) 0s;
   transform-origin: right bottom;
@@ -75,7 +78,7 @@
   font-size: 14px;
   &:hover {
     border-color: rgba(22, 24, 35, 0.2);
-    background-color: var(--white);
+    background-color: var(--white-btn-hover);
   }
 }
 
@@ -92,9 +95,9 @@
 .outline {
   color: var(--primary);
   border-color: currentColor;
-  background-color: var(--white);
+  background-color: var(--white-btn-follow);
   &:hover {
     border-color: var(--primary);
-    background-color: rgba(254, 44, 85, 0.06);
+    background-color: var(--white-btn-follow-hover);
   }
 }

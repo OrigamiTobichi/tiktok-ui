@@ -191,7 +191,7 @@ function Header() {
     <header className={cx('wrapper')}>
       <div className={cx('inner')}>
         <Link to={config.routes.home} className={cx('logo-link')}>
-          <img src={image.logo} alt="Tiktok" />
+          <img src={image.logoLight} alt="Tiktok" />
         </Link>
 
         {/*Tippy search*/}
@@ -205,12 +205,12 @@ function Header() {
             <>
               <Tippy content="Messages" delay={[0, 100]} animation="scale">
                 <button className={cx('user-btn')}>
-                  <Icons.PaperPlane />
+                  <Icons.PaperPlane className={cx('btn-dark')} />
                 </button>
               </Tippy>
               <Tippy content="Inbox" delay={[0, 100]} animation="scale">
                 <button className={cx('user-btn')}>
-                  <Icons.Messages />
+                  <Icons.Messages className={cx('btn-dark')} />
                   <span className={cx('badge')}>1</span>
                 </button>
               </Tippy>

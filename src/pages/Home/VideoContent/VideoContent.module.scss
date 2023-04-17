@@ -45,12 +45,13 @@
   font-size: 23px;
   border-radius: 50%;
   transition: all 200ms ease-in-out 0s;
-  background-color: rgba(22, 24, 35, 0.06);
+  color: var(--light-grey);
+  background-color: var(--light-bg-search);
   margin-top: 8px;
   margin-bottom: 6px;
 }
 .view {
-  color: rgba(22, 24, 35, 0.75);
+  color: var(--light-grey);
   font-size: 12px;
   line-height: 17px;
   text-align: center;
