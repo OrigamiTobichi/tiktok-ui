@@ -13,8 +13,10 @@
   --white-discover: #fff;
   --white-btn-app: #fff;
   --white-btn-hover:#fff;
-  --white-btn-follow-hover:rgba(254, 44, 85, 0.06);
+  --light-preview-account:#fff;
+  --light-bg-preview:#fff;
   --white-btn-follow:#fff;
+  --white-btn-follow-hover:rgba(254, 44, 85, 0.06);
   --light-btn-chat-notice: #000;
   --light-btn-search: #a6a7ab;
   --light-grey-075: rgba(22, 24, 35, 0.75);
@@ -49,6 +51,8 @@
 }
 
 [data-theme='dark'] {
+  --light-bg-preview:var(--dark-black-37);
+  --light-preview-account:var(--dark-black-27);
   --light-shadow-header: var(--dark-shadow-header);
   --light-info-user:var(--dark-grey-09);
   --white-btn-follow-hover:#000000c9;

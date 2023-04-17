@@ -6,6 +6,7 @@ import styles from './AccountPreview.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { UserAuth } from '~/context/AuthContext';
+import Image from '~/components/Images/Images';
 
 const cx = classNames.bind(styles);
 
@@ -18,6 +19,7 @@ function AccountPreview({ data, children, label }) {
         <>{children}</>
       ) : (
         <Tippy
+        // visible
           delay={[1000, 400]}
           offset={[-20, 0]}
           interactive
@@ -26,7 +28,7 @@ function AccountPreview({ data, children, label }) {
             <div tabIndex="-1" {...attrs}>
               <WrapperPopper className={cx('wrapper')}>
                 <div className={cx('header')}>
-                  <img className={cx('preview-avatar')} src={data.data.avatar} alt="user" />
+                  <Image className={cx('preview-avatar')} src={data.data.avatar} alt="user" />
                   <Button primary>Follow</Button>
                 </div>
                 <div className={cx('body')}>

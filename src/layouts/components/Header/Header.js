@@ -186,6 +186,8 @@ function Header() {
   } else {
     props.onClick = handleClickUpLoad;
   }
+  
+  
 
   return (
     <header className={cx('wrapper')}>
