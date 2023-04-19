@@ -11,6 +11,7 @@
   align-items: center;
   justify-content: center;
   margin-left: 16px;
+
   // + .wrapper {
   // }
   &.disable {
@@ -19,6 +20,7 @@
     user-select: none;
   }
 }
+
 //button size
 .small {
   min-width: 88px;
@@ -26,24 +28,28 @@
   min-height: 28px;
   padding: 0px 10px;
 }
+
 .large {
   min-width: 116px;
-  min-height: 48px;
+  height: 48px;
   font-size: 18px;
   padding: 6px 8px;
   font-weight: 600;
 }
 
-.icon ~ .title,
-.title ~ .icon {
+.icon~.title,
+.title~.icon {
   margin-left: 8px;
 }
+
 .icon {
   display: inline-flex;
 }
+
 .title {
   line-height: 24px;
 }
+
 //button types
 
 .text {
@@ -59,6 +65,7 @@
   align-items: center;
   border-radius: 0.2rem;
   transition: background-color 250ms ease 0s;
+
   &:hover {
     background-color: var(--light-grey-003);
   }
@@ -73,10 +80,8 @@
   color: var(--light-grey-075);
   background-color: var(--white-btn-app);
   white-space: nowrap;
-  transition: transform 0.3s cubic-bezier(0.4, 0.14, 0.3, 1) 0s;
-  transform-origin: right bottom;
-  transform: none;
   font-size: 14px;
+
   &:hover {
     border-color: rgba(22, 24, 35, 0.2);
     background-color: var(--white-btn-hover);
@@ -87,6 +92,7 @@
   padding: 5px 0px;
   color: var(--white) !important;
   background-color: rgb(254, 44, 85);
+
   &:hover {
     border-color: var(--primary);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), rgb(254, 44, 85);
@@ -97,6 +103,7 @@
   color: var(--primary);
   border-color: currentColor;
   background-color: var(--white-btn-follow);
+
   &:hover {
     border-color: var(--primary);
     background-color: var(--white-btn-follow-hover);

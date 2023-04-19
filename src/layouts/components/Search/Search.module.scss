@@ -4,7 +4,7 @@
   height: var(--height-search);
   background-color: var(--light-bg-search);
   border-radius: 92px;
-  border: 1px solid transparent;
+  border: 1px solid var(--transparent);
   padding-left: 16px;
   display: flex;
   input {

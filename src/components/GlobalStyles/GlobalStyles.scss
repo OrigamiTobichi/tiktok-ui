@@ -5,19 +5,22 @@
   --nav-logo: url('../../assets/images/logo.svg');
   --primary: #fe2c55;
   --black: #000;
+  --transparent: transparent;
   --white: #fff;
-  --light-info-user:var(--light-grey);
+  --light-info-user: var(--light-grey);
   --light-shadow-header: rgba(0, 0, 0, 0.12);
   --white-header: #fff;
   --white-sidebar: #fff;
   --white-content: #fff;
   --white-discover: #fff;
   --white-btn-app: #fff;
-  --white-btn-hover:#fff;
-  --light-preview-account:#fff;
-  --light-bg-preview:#fff;
-  --white-btn-follow:#fff;
-  --white-btn-follow-hover:rgba(254, 44, 85, 0.06);
+  --white-btn-hover: #fff;
+  --light-preview-account: #fff;
+  --light-bg-preview: #fff;
+  --white-btn-follow: #fff;
+  --white-btn-follow-preview: #fff;
+  --white-btn-follow-preview-hover: rgba(254, 44, 85, 0.06);
+  --white-btn-follow-hover: rgba(254, 44, 85, 0.06);
   --light-btn-chat-notice: #000;
   --light-btn-search: #a6a7ab;
   --light-grey-075: rgba(22, 24, 35, 0.75);
@@ -41,8 +44,9 @@
   --dark-black-004: rgba(255, 255, 255, 0.04);
   --dark-placeholder: rgb(114 114 114);
   --dark-btn-follow-hover: rgb(32 20 22);
-  --dark-shadow-header:rgb(255 255 255 / 12%);
-  
+  --dark-btn-follow-preview-hover: rgba(254, 44, 85, 0.06);
+  --dark-shadow-header: rgb(255 255 255 / 12%);
+
   //size
   --default-layout-header-height: 60px;
   // --default-layout-width: 1150px;
@@ -52,14 +56,17 @@
 }
 
 [data-theme='dark'] {
-  --nav-logo:url("../../assets/images/logo-light.svg");
-  --light-bg-preview:var(--dark-black-37);
-  --light-preview-account:var(--dark-black-27);
+  --transparent: none;
+  --nav-logo: url("../../assets/images/logo-light.svg");
+  --light-bg-preview: var(--dark-black-37);
+  --light-preview-account: var(--dark-black-27);
   --light-shadow-header: var(--dark-shadow-header);
-  --light-info-user:var(--dark-grey-09);
-  --white-btn-follow-hover:#000000c9;
-  --white-btn-follow:var(--dark-btn-follow-hover);
-  --white-btn-hover:var(--dark-black-46);
+  --light-info-user: var(--dark-grey-09);
+  --white-btn-follow-hover: #000000c9;
+  --white-btn-follow: var(--dark-btn-follow-hover);
+  --white-btn-hover: var(--dark-black-46);
+  --white-btn-follow-preview: var(--dark-black-008);
+  --white-btn-follow-preview-hover: var(--dark-btn-follow-preview-hover);
   --white-btn-app: var(--dark-black-37);
   --light-btn-chat-notice: var(--dark-grey-09);
   --light-placeholder: var(--dark-placeholder);
@@ -75,6 +82,7 @@
   --light-grey-075: var(--dark-grey-075);
   --light-grey-064: var(--dark-grey-075);
   --light-grey: var(--dark-grey-09);
+
   a[href] {
     color: var(--white);
   }
@@ -86,16 +94,20 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 html {
   font-size: 62.5%;
   overflow: scroll;
   overflow-x: hidden;
 }
+
 html *::-webkit-scrollbar {
   // border-radius: 0;
   // width: 8px;
-  width: 0; /* Remove scrollbar space */
-  background: transparent; /* Optional: just make scrollbar invisible */
+  width: 0;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
 }
 
 html *::-webkit-scrollbar-thumb {
@@ -114,37 +126,50 @@ body {
   line-height: 1.5;
   text-rendering: optimizeSpeed;
 }
+
 //Font emmbeded
 @font-face {
   font-family: ProximaNova;
   src: url('/assets/fonts/Proxima-Nova-Bold.woff');
   font-weight: 700;
 }
+
 @font-face {
   font-family: ProximaNova;
   src: url('/assets/fonts/ProximaNova-Semibold.woff2');
   font-weight: 600;
 }
+
 @font-face {
   font-family: ProximaNova;
   src: url('/assets/fonts/Proxima-Nova-Regular.woff2');
   font-weight: 400;
 }
+
 @font-face {
   font-family: SofiaPro;
   src: url('/assets/fonts/sofiapro-bold.woff2');
   font-weight: 700;
 }
+
+@font-face {
+  font-family: SofiaPro;
+  src: url('/assets/fonts/sofiapro-medium.woff');
+  font-weight: 500;
+}
+
 @font-face {
   font-family: IBM Plex Sans;
   src: url('/assets/fonts/zYXgKVElMYYaJe8bpLHnCwDKhdHeFQ.woff2');
   font-weight: 400;
 }
+
 @font-face {
   font-family: IBM Plex Sans;
   src: url('/assets/fonts/zYX9KVElMYYaJe8bpLHnCwDKjWr7AIFsdA.woff2');
   font-weight: 600;
 }
+
 @font-face {
   font-family: IBM Plex Sans;
   src: url('/assets/fonts/zYX9KVElMYYaJe8bpLHnCwDKjWr7AIFsdA.woff2');
@@ -155,9 +180,11 @@ a[href] {
   text-decoration: none;
   color: var(--black);
 }
+
 li {
   list-style: none;
 }
+
 svg {
   display: inline-block;
 }
@@ -165,6 +192,7 @@ svg {
 img {
   max-width: 100%;
 }
+
 input,
 button,
 [tabindex] {
@@ -183,7 +211,8 @@ body .tippy-box {
   line-height: 2.2rem;
   background-color: rgba(84, 84, 84, 0.92);
 }
-body .tippy-box[data-placement^='bottom'] > .tippy-arrow:before {
+
+body .tippy-box[data-placement^='bottom']>.tippy-arrow:before {
   border-bottom-color: rgba(84, 84, 84, 0.92);
   top: -8px;
 }

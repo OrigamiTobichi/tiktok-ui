@@ -2,6 +2,7 @@ import classNames from 'classnames/bind';
 import styles from './Button.module.scss';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { useEffect } from 'react';
 
 const cx = classNames.bind(styles);
 
@@ -22,6 +23,7 @@ function Button({
   iconRightSignIn,
   iconLeftSignIn,
   toggle,
+  refBtn,
   ...passProps
 }) {
   let Cpn = 'button';
@@ -31,6 +33,7 @@ function Button({
     //Những prop k lường trước được khi nào nó có
     ...passProps,
   };
+
 
   if (to) {
     props.to = to;
@@ -58,7 +61,7 @@ function Button({
   });
 
   return (
-    <Cpn className={classes} {...props}>
+    <Cpn className={classes} {...props} ref={refBtn}>
       {iconUpload && iconUpload}
       {iconLeftSignIn && <span className={cx('icon')}>{iconLeftSignIn}</span>}
       <span className={cx('title')}>{children}</span>

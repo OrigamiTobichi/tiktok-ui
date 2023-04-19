@@ -19,7 +19,6 @@ function AccountPreview({ data, children, label }) {
         <>{children}</>
       ) : (
         <Tippy
-        // visible
           delay={[1000, 400]}
           offset={[-20, 0]}
           interactive

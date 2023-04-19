@@ -187,8 +187,6 @@ function Header() {
     props.onClick = handleClickUpLoad;
   }
   
-  
-
   return (
     <header className={cx('wrapper')}>
       <div className={cx('inner')}>
