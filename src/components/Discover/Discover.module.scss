@@ -1,8 +1,9 @@
 .wrapper {
   width: 100%;
   padding: 16px 8px 8px;
-  border-top: 1px solid rgba(22, 24, 35, 0.12);
+  border-top: 1px solid var(--light-line-search);
 }
+
 .label {
   color: var(--light-grey-075);
   font-weight: 600;
@@ -10,6 +11,7 @@
   line-height: 20px;
   padding-bottom: 16px;
 }
+
 .list {
   display: flex;
   flex-wrap: wrap;
@@ -27,7 +29,8 @@
   border-radius: 12px;
   background-color: var(--white-discover);
   transition: background-color 250ms ease 0s;
-  > p {
+
+  >p {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -37,10 +40,12 @@
     line-height: 18px;
     padding-left: 6px;
   }
+
   &:hover {
     background-color: var(--light-grey-003);
   }
 }
+
 .icon {
   color: var(--light-grey-075);
   width: 14px;

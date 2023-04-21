@@ -186,12 +186,12 @@ function Header() {
   } else {
     props.onClick = handleClickUpLoad;
   }
-  
+
   return (
     <header className={cx('wrapper')}>
       <div className={cx('inner')}>
         <Link to={config.routes.home} className={cx('logo-link')}>
-          <img src={image.logoLight} alt="Tiktok" className={cx('nav-logo')}/>
+          <img src={image.logoLight} alt="Tiktok" className={cx('nav-logo')} />
         </Link>
 
         {/*Tippy search*/}
@@ -203,12 +203,12 @@ function Header() {
           </Button>
           {currentUser ? (
             <>
-              <Tippy content="Messages" delay={[0, 100]} animation="scale">
+              <Tippy zIndex={99999} content="Messages" delay={[0, 100]} animation="scale">
                 <button className={cx('user-btn')}>
                   <Icons.PaperPlane className={cx('btn-dark')} />
                 </button>
               </Tippy>
-              <Tippy content="Inbox" delay={[0, 100]} animation="scale">
+              <Tippy zIndex={99999} content="Inbox" delay={[0, 100]} animation="scale">
                 <button className={cx('user-btn')}>
                   <Icons.Messages className={cx('btn-dark')} />
                   <span className={cx('badge')}>1</span>

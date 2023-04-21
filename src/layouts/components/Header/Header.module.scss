@@ -6,7 +6,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 10000;
   background-color: var(--white-header);
   width: 100%;
   height: var(--default-layout-header-height);
@@ -14,6 +14,7 @@
   display: flex;
   justify-content: center;
 }
+
 .inner {
   width: var(--default-layout-width);
   display: flex;
@@ -21,14 +22,17 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 24px 0 16px;
-  > img {
+
+  >img {
     cursor: pointer;
   }
 }
+
 .logo-link {
   display: flex;
   flex-basis: 30%;
 }
+
 .nav-logo {
   content: var(--nav-logo);
 }
@@ -43,6 +47,7 @@
   border: 1px solid transparent;
   padding-left: 16px;
   display: flex;
+
   input {
     flex: 1;
     font-size: 1.6rem;
@@ -50,10 +55,12 @@
     background-color: transparent;
     caret-color: var(--primary);
     height: 100%;
-    &:not(:placeholder-shown) ~ .search-button {
+
+    &:not(:placeholder-shown)~.search-button {
       color: #4c4e57;
     }
   }
+
   &::after {
     content: '';
     position: absolute;
@@ -64,6 +71,7 @@
     height: calc(var(--height-search) - 18px);
     transform: translateY(-50%);
   }
+
   &:focus-within {
     border-color: #c5c6c9;
   }
@@ -72,12 +80,14 @@
 .search-result {
   width: 361px;
 }
+
 .search-title {
   padding: 5px 12px;
   font-size: 1.6rem;
   font-weight: 500;
   color: #a2a3a7;
 }
+
 .clear,
 .loading {
   position: absolute;
@@ -94,10 +104,12 @@
   border-bottom-right-radius: 92px;
   color: #a6a7ab;
   font-size: 1.9rem;
+
   &:hover {
     background: rgba(22, 24, 35, 0.03);
     cursor: pointer;
   }
+
   &:active {
     background: rgba(22, 24, 35, 0.06);
   }
@@ -109,6 +121,7 @@
   justify-content: flex-end;
   display: flex;
   align-items: center;
+
   &.gap {
     column-gap: 20px;
   }
@@ -135,6 +148,7 @@
   height: 2.6rem;
   position: relative;
 }
+
 .badge {
   font-weight: 600;
   font-size: 1.4rem;
@@ -152,12 +166,14 @@
   position: absolute;
   top: -20%;
 }
+
 .user-avatar {
   cursor: pointer;
   width: 3.2rem;
   height: 3.2rem;
   border-radius: 50%;
 }
+
 .btn-dark {
   color: var(--light-btn-chat-notice);
 }

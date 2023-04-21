@@ -1,16 +1,18 @@
 .wrapper {
   padding: 16px 0;
   position: relative;
+
   &::before {
     content: '';
     position: absolute;
     height: 0.5px;
     left: 8px;
     right: 8px;
-    background-color: rgba(22, 24, 35, 0.12);
+    background-color: var(--light-line-search);
     top: 0;
   }
 }
+
 .label {
   padding: 0 8px;
   color: var(--light-grey-064);
@@ -27,6 +29,7 @@
   margin-top: 8px;
   cursor: pointer;
 }
+
 .see-all {
   font-family: 'IBM Plex Sans';
   color: rgb(254, 44, 85);
